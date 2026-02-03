@@ -61,7 +61,12 @@ button {
 /****************************************************
  * Country Grid
  ****************************************************/
-
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
 /****************************************************
  * Country Card
  ****************************************************/
@@ -72,8 +77,12 @@ button {
   cursor: pointer;
 }
 
+.country:hover {
+  transform: scale(1.03);
+}
+
 .country img {
-  width: 20%;
+  width: 100%;
   height: 160px;
   border-radius: 6px;
 }
