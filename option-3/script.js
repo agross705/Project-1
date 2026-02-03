@@ -2,6 +2,7 @@
  * Elements
  ****************************************************/
 const countriesContainer = document.getElementById("countries");
+const searchInput = document.getElementById("search");
 
 let countriesData = [];
 
@@ -57,3 +58,14 @@ function displayCountries(countries) {
     countriesContainer.appendChild(card);
   });
 }
+
+/****************************************************
+ * Search
+ ****************************************************/
+searchInput.addEventListener("input", e => {
+  const value = e.target.value.toLowerCase();
+  const filtered = countriesData.filter(c =>
+    c.name.common.toLowerCase().includes(value)
+  );
+  displayCountries(filtered);
+});
