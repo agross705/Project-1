@@ -65,7 +65,22 @@ button {
 /****************************************************
  * Country Card
  ****************************************************/
+.country {
+  background: var(--element);
+  border-radius: 6px;
+  padding: 1rem;
+  cursor: pointer;
+}
 
+.country img {
+  width: 20%;
+  height: 160px;
+  border-radius: 6px;
+}
+
+.countryInfo {
+  padding: 1rem;
+}
 /****************************************************
  * Footer
  ****************************************************/
@@ -74,5 +89,5 @@ footer {
     font-size: 15px;
     text-align: center;
     color: hsl(0, 0%, 52%);
-    /* position: fixed; */
+    position: fixed;
 }
