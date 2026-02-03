@@ -1,13 +1,64 @@
 /****************************************************
- * Basic Page Styling
+ * Root Variables
  ****************************************************/
-body {
-    background-color: gold;
+:root {
+  --bg: hsl(0, 0%, 98%);
+  --text: hsl(200, 15%, 8%);
+  --element: hsl(0, 0%, 100%);
+}
+/****************************************************
+ * Global Styling
+ ****************************************************/
+* {
+  box-sizing: border-box;
+}
+ body {
+    background: var(--bg);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text);
 }
 main {
-    background-color: hsl(0, 0%, 98%);
     height: 100vh;
 }
+/****************************************************
+ * Header
+ ****************************************************/
+header {
+    background: var(--element);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/****************************************************
+ * Controls
+ ****************************************************/
+.controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.controls input,
+.controls select,
+button {
+  padding: 0.75rem;
+  border: none;
+  background: var(--element);
+  color: hsl(0, 0%, 52%);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+/****************************************************
+ * Country Grid
+ ****************************************************/
+
+/****************************************************
+ * Country Card
+ ****************************************************/
 
 /****************************************************
  * Footer
@@ -16,6 +67,6 @@ footer {
     background-color:cyan;
     font-size: 15px;
     text-align: center;
-    color: white;
-    position: fixed;
+    color: hsl(0, 0%, 52%);
+    /* position: fixed; */
 }
