@@ -16,14 +16,29 @@
       <h1>Where in the world?</h1>
 
       <!-- Light/Dark mode option -->
+      <button id="themeToggle">🌙 Dark Mode</button>
     </header>
 
-    <main>
-      <!-- Search for a country box -->
-
-      <!-- Filter by Region dropdown -->
+    <!-- Search for a country box -->
+    <section class="controls">
+      <input
+        type="text"
+        id="search"
+        placeholder="Search for a country..."/>
+        
+    <!-- Filter by Region dropdown -->
+      <select id="regionFilter">
+      <option value="">Filter by Region</option>
+      <option value="Africa">Africa</option>
+      <option value="Americas">Americas</option>
+      <option value="Asia">Asia</option>
+      <option value="Europe">Europe</option>
+      <option value="Oceania">Oceania</option>
+      </select>
+    </section>
       
-      <!-- Preview cards of Countries with:
+    <main id="countries">
+      <!-- Preview grid cards of Countries with:
         Flag image
         Name
         Population
@@ -32,6 +47,9 @@
     </main>
 
     <footer>
+      Built with data from 
+      <a href="https://restcountries.com/">REST Countries API</a>
+      
       &copy; 2026 Coded by 
       <a href="https://github.com/agross705">agross705</a>.
     </footer>
