@@ -3,6 +3,7 @@
  ****************************************************/
 const countriesContainer = document.getElementById("countries");
 const searchInput = document.getElementById("search");
+const regionFilter = document.getElementById("regionFilter");
 
 let countriesData = [];
 
@@ -67,5 +68,16 @@ searchInput.addEventListener("input", e => {
   const filtered = countriesData.filter(c =>
     c.name.common.toLowerCase().includes(value)
   );
+  displayCountries(filtered);
+});
+
+/****************************************************
+ * Filter By Region
+ ****************************************************/
+regionFilter.addEventListener("change", e => {
+  const region = e.target.value;
+  const filtered = region
+    ? countriesData.filter(c => c.region === region)
+    : countriesData;
   displayCountries(filtered);
 });
