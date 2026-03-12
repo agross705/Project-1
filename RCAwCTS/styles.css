@@ -1,0 +1,168 @@
+/****************************************************
+ * Style Guide
+ ****************************************************
+~~ COLOR SCHEME ~~
+Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+
+~~ FONT FAMILY ~~
+Family: [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans)
+
+~~ FONT SIZE ~~
+Homepage Items: 14px => 0.875rem
+Detail Page: 16px => 1rem
+
+~~ FONT WEIGHT ~~
+Weights: 300, 600, 800
+
+~~ MEDIA QUERY ~~
+Mobile: 375px
+Desktop: 1440px
+*/
+
+/****************************************************
+ * Global Styling
+ ****************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(0, 0%, 98%);
+  font-family: "Nunito Sans", sans-serif;
+  color: hsl(200, 15%, 8%);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/****************************************************
+ * Header
+ ****************************************************/
+header {
+  background: hsl(0, 0%, 100%);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-weight: 800;
+}
+
+/****************************************************
+ * Controls
+ ****************************************************/
+.controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.controls input,
+.controls select,
+button {
+  padding: 0.55rem;
+  border: none;
+  background: hsl(0, 0%, 100%);
+  color: hsl(200, 15%, 8%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/****************************************************
+ * Country Grid
+ ****************************************************/
+#countries {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  row-gap: 4rem;
+  column-gap: 4.8rem;
+  margin: 0 1.5rem;
+}
+
+/****************************************************
+ * Country Preview Card
+ ****************************************************/
+img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.card{
+  width: 100%;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 100%);
+  padding: 3px;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+h2 {
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+p {
+  font-weight: 300;
+  padding-left: 10px;
+}
+
+/****************************************************
+* Dark Mode Toggle
+****************************************************/
+/*Body */
+body.dark {
+  background: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+}
+
+/*Header */
+body.dark header {
+  background: hsl(209, 23%, 22%);
+}
+
+/*Controls*/
+body.dark .controls input,
+body.dark .controls select,
+body.dark button {
+  background: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+}
+
+/* Placeholder color */
+body.dark .controls input::placeholder {
+  color: hsl(0, 0%, 100%);
+}
+
+body.dark .card {
+  background-color: hsl(209, 23%, 22%);
+}
+
+/****************************************************
+ Responsive
+****************************************************/
+
+
+/****************************************************
+ * Footer
+ ****************************************************/
+footer {
+  background-color: cyan;
+  font-size: 15px;
+  text-align: center;
+  color: hsl(0, 0%, 52%);
+  /* position: fixed; */
+}

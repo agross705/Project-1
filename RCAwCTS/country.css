@@ -1,0 +1,186 @@
+/****************************************************
+ * Style Guide
+ ****************************************************
+~~ COLOR SCHEME ~~
+Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+
+~~ FONT FAMILY ~~
+Family: [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans)
+
+~~ FONT SIZE ~~
+Homepage Items: 14px => 0.875rem
+Detail Page: 16px => 1rem
+
+~~ FONT WEIGHT ~~
+Weights: 300, 600, 800
+
+~~ MEDIA QUERY ~~
+Mobile: 375px
+Desktop: 1440px
+*/
+
+/****************************************************
+ * Global Styling
+ ****************************************************/
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+  background: hsl(0, 0%, 98%);
+  font-family: "Nunito Sans", sans-serif;
+  color: hsl(200, 15%, 8%);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/****************************************************
+ Header
+****************************************************/
+header {
+  background: hsl(0, 0%, 100%);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+font-weight: 800;
+}
+
+/****************************************************
+ Controls
+****************************************************/
+.controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+button,
+#backBtn,
+.borderBtn {
+  padding: 0.55rem;
+  border: none;
+  background: hsl(0, 0%, 100%);
+  color: hsl(200, 15%, 8%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/****************************************************
+ Layout
+****************************************************/
+.countryDetails {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 4rem;
+align-items: center;
+}
+
+.flagImg img {
+width: 100%;
+max-width: 550px;
+box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.countryInfo h2 {
+font-weight: 600;
+margin-bottom: 2rem;
+font-size: 2rem;
+}
+
+.detailsWrapper {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 2rem;
+margin-bottom: 2rem;
+}
+
+.detailsWrapper ul {
+font-weight: 300;
+list-style: none;
+line-height: 2;
+font-size: 0.95rem;
+}
+
+/****************************************************
+ Border Countries
+****************************************************/
+.borderCountries {
+display: flex;
+align-items: center;
+gap: 1rem;
+flex-wrap: wrap;
+}
+
+.borderContainer {
+display: flex;
+gap: 0.75rem;
+flex-wrap: wrap;
+}
+
+.borderBtn {
+font-weight: 300;
+}
+
+/****************************************************
+ Responsive
+****************************************************/
+@media (max-width: 768px) {
+body {
+padding: 1.5rem;
+}
+
+.countryDetails {
+grid-template-columns: 1fr;
+gap: 2rem;
+}
+
+.detailsWrapper {
+grid-template-columns: 1fr;
+}
+}
+
+/****************************************************
+* Dark Mode Toggle
+****************************************************/
+/*Body*/
+body.dark {
+  background: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+}
+
+/*Header*/
+body.dark header {
+  background: hsl(209, 23%, 22%);
+}
+
+/*Controls*/
+body.dark button,
+body.dark #backBtn
+body.dark .borderBtn {
+  background: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+}
+
+/****************************************************
+ * Footer
+ ****************************************************/
+footer {
+  background-color: cyan;
+  font-size: 15px;
+  text-align: center;
+  color: hsl(0, 0%, 52%);
+  /* position: fixed; */
+}
